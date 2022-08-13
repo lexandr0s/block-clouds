@@ -14,5 +14,5 @@ systemctl enable netfilter-persistent.service
 ```
 iptables -F BLCLOUD
 iptables -X BLCLOUD
-iptables-save >> /etc/iptables/rules.v4
+iptables-save > /etc/iptables/rules.v4
 ```
