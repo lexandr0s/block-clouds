@@ -36,4 +36,4 @@ do
     iptables -v -A BLCLOUD -s $IP -j DROP
 done
 
-iptables-save >> /etc/iptables/rules.v4
+iptables-save > /etc/iptables/rules.v4
