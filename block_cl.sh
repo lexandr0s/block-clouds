@@ -22,10 +22,11 @@ echo -e "\n#Azure\n" >> bl.txt
 echo "Add MS Azure ip range to black list"
 curl -s https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220808.json | jq -r .values[].properties.addressPrefixes[] | grep -v : | grep -v null | sort -u >> bl.txt
 
+
+
 echo "Add drop rules into iptables"
 
 # Empty the chain BLCLOUD before adding rules
-
 iptables -F BLCLOUD
 [[ $? -ne 0 ]] && iptables -N BLCLOUD
 
@@ -36,5 +37,3 @@ do
 done
 
 iptables-save >> /etc/iptables/rules.v4
-
-
