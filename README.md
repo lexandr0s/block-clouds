@@ -1,5 +1,5 @@
 # block-clouds
-Блокировка облачных провайдеров на уровне iptables. В текущий момент блокируются 4 крупнейших облака: AWS (Amazone), Google Cloud, Oracle Cloud, Microsoft Azure.
+Блокировка облачных провайдеров на уровне iptables. В текущий момент блокируются 4 крупнейших облака: AWS (Amazon), Google Cloud, Oracle Cloud, Microsoft Azure.
 
 Для корректной работы скрипта должны быть установлены curl, jq, iptables-persistent.
 
