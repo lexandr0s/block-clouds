@@ -3,10 +3,14 @@
 
 Для корректной работы скрипта должны быть установлены curl, jq, iptables-persistent.
 
+Запуск скрипта:
 ```
 apt update
 apt install -y curl jq iptables-persistent
 systemctl enable netfilter-persistent.service
+wget https://raw.githubusercontent.com/lexandr0s/block-clouds/main/block_cl.sh -O block_cl.sh
+chmod +x block_cl.sh
+./block_cl.sh
 ```
 Блокируются более 30 тыс. подсетей и адресов. Поэтому скрипт отрабатывает довольно долго. 10-15 минут.
 
