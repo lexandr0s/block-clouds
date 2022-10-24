@@ -30,6 +30,9 @@ echo "Add drop rules into iptables"
 iptables -F BLCLOUD
 [[ $? -ne 0 ]] && iptables -N BLCLOUD
 
+iptables -v -D INPUT -j BLCLOUD
+iptables -v -A INPUT -j BLCLOUD
+
 # Read bl.txt and add IP into IPTables one by one
 grep -v "#" bl.txt | sort | uniq | while read IP
 do
